@@ -27,8 +27,9 @@ public class EntityRest {
     }
 
     @PostMapping
-    public void salvar(@RequestBody entity entity){
+    public entity salvar(@RequestBody entity entity){
         repo.save(entity);
+        return entity;
     }
 
     @PutMapping
